@@ -60,7 +60,7 @@ eksctl create iamserviceaccount \
 
       kubectl api-versions | grep rbac.authorization.k8s.io
 
-* Note: Before you apply the following manifests, check for the latest version of ExternalDNS (from the GitHub website).
+* Note: Before you apply the following manifests, check for the latest version of ExternalDNS (from the GitHub website) and replace the image-version in  DeployExternalDNS.yaml
 
       https://github.com/kubernetes-sigs/external-dns/releases
   
