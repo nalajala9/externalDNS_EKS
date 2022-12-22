@@ -76,8 +76,24 @@ eksctl create iamserviceaccount \
 
       kubectl logs -f $(kubectl get po | egrep -o 'external-dns[A-Za-z0-9-]+')
 
+## Step-2: Verify that ExternalDNS is working
+
+* Create a service that's exposed as LoadBalancer and that can be routed externally through the domain name that's hosted on Route 53:
+
+      kubectl apply -f Deployment.yaml
 
 
+> Note: Replace DOMAIN_NAME with your domain's name.
+
+* Check that the NGINX service was created with the LoadBalancer type:
+
+       kubectl get svc
+       
+> Note: The service automatically creates a Route 53 record for the hosted zone.
+
+* Check the logs to verify that the Route 53 record was created:
+
+        kubectl logs -f $(kubectl get po | egrep -o 'external-dns[A-Za-z0-9-]+')
 
 
 
