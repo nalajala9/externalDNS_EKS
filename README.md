@@ -48,7 +48,7 @@ eksctl create iamserviceaccount \
     --override-existing-serviceaccounts
     
 ```
-*  Note: Replace SERVICE_ACCOUNT_NAME with your service account's name, NAMESPACE with your namespace, CLUSTER_NAME with your cluster's name, and IAM_POLICY_ARN with your IAM policy's ARN.
+*  Note: Replace SERVICE_ACCOUNT_NAME with your service account's name, NAMESPACE with your namespace, CLUSTER_NAME with your cluster's name, and IAM_POLICY_ARN with your IAM policy's ARN and also SERVICE_ACCOUNT_NAME,NAMESPACE,domain-filter must be updated in DeployExternalDNS.yaml file
 
 > Verify the Service Account
 
